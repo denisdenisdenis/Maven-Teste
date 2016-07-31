@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import TestCases.Parametros;
 
-public interface TypeElements {
-
-	WebElement find(WebDriver driver, ElementosDaTela edl);
+public interface TypeAction {
+	
+	void doit(ElementosDaTela edl);
 }

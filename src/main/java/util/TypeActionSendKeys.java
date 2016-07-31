@@ -6,12 +6,11 @@ import org.openqa.selenium.WebElement;
 
 import TestCases.Parametros;
 
-public class TypeName implements TypeElements{
+public class TypeActionSendKeys implements TypeAction {
 
-	public WebElement find(WebDriver driver, Parametros p) {
-		return driver.findElement(By.name(p.getName()));
+	
+	public void doit(ElementosDaTela edl) {
+		edl.getElement().sendKeys(edl.getValue());
 	}
-
-
 
 }

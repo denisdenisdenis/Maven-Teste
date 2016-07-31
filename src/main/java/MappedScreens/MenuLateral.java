@@ -2,10 +2,10 @@ package MappedScreens;
 
 import org.openqa.selenium.WebDriver;
 
-public class menuLateral {
+public class MenuLateral {
 
 		private WebDriver driver;
-	    public menuLateral(WebDriver driver) {							
+	    public MenuLateral(WebDriver driver) {							
 	        this.driver = driver;
 	    }
 	
