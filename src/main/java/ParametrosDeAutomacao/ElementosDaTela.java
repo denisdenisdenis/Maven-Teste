@@ -1,4 +1,4 @@
-package util;
+package ParametrosDeAutomacao;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.server.handler.html5.ClearSessionStorage;

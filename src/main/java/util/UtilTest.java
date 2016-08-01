@@ -3,8 +3,11 @@ package util;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import ParametrosDeAutomacao.ElementosDaTela;
 
 public class UtilTest {
 
@@ -23,7 +26,6 @@ public class UtilTest {
 			try {
 				el.setElement(el.getType().find(driver, el));
 			} catch (Exception e) {
-				e.printStackTrace();
 			}
 			try {
 				el.getAction().doit(el);
@@ -40,7 +42,17 @@ public class UtilTest {
 		if (navegador == "Chrome") {
 			System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			
+			
+//			driver.findElement(By.className(className));
+//			driver.findElement(By.cssSelector(selector));
+//			driver.findElement(By.linkText(linkText));
+//			driver.findElement(By.partialLinkText(linkText));
+//			driver.findElement(By.tagName(name));
+//			driver.findElement(By.xpath(xpathExpression));
+			
+			
 		}
 		// implementar outros navegadores
 	}

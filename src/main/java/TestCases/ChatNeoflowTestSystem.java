@@ -4,8 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import MappedScreens.MenuLateral;
 import MappedScreens.Neoflow;
-import MappedScreens.menuLateral;
 import util.UtilTest;
 
 
@@ -24,20 +24,16 @@ public class ChatNeoflowTestSystem {
 	@Test
 	public void deveLogarNoChatViaNeoFlow() {
 		Neoflow.logar(baseUrl,"adm", "123");
+		MenuLateral.acessaCanais(baseUrl);
 	//	menuLateral.acessaHome().acessaCanais().acessaCallCenter();
 		
 		
 	}
-	@Test
-	public void deveLogarNoChatCliente(){
 		
-	}
-
-	
 	
 	@After
 	public void close(){
-		UtilTest.driver.close();
+	//	UtilTest.driver.close();
 	}
 }
 	

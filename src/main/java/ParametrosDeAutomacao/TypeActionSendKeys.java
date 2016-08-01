@@ -1,4 +1,4 @@
-package util;
+package ParametrosDeAutomacao;
 
 import org.sikuli.script.Screen;
 

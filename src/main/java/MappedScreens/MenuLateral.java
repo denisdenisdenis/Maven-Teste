@@ -1,32 +1,20 @@
 package MappedScreens;
 
-import org.openqa.selenium.WebDriver;
+import java.util.ArrayList;
+import java.util.List;
+
+import ParametrosDeAutomacao.ElementosDaTela;
+import ParametrosDeAutomacao.TypeActionClick;
+import ParametrosDeAutomacao.TypeElementId;
+import util.UtilTest;
 
 public class MenuLateral {
 
-		private WebDriver driver;
-	    public MenuLateral(WebDriver driver) {							
-	        this.driver = driver;
-	    }
-	    
-	    public static void acessaHome(){
-	    	
-	    }
-	
-	public void visita() {
-        //driver.get("localhost:8080/usuarios");
+	public static void acessaCanais(String urlLogin){
+		List<ElementosDaTela> elementos = new ArrayList<ElementosDaTela>();
+		elementos.add(new ElementosDaTela(new TypeElementId(), "itemmenu_home_1_1", new TypeActionClick(), "", urlLogin+"/CCenterWeb/images/portal/icones/peq/ico_canais.gif"));
 		
-	}
-	public void visitaUrl() {
-        driver.get("localhost:8080/CCenterWeb/Portal.dm?method=portal&redirect=&mensagem=");
-	}
-	public menuCRM crm(){
-		return new menuCRM(driver);
-		
-	}
-	public menuCallCenter callCenter(){
-		return new menuCallCenter(driver);
-		
+		UtilTest.triggerAutomated("", elementos);
 	}
 
 
