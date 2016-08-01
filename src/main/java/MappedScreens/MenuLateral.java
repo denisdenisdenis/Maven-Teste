@@ -8,6 +8,10 @@ public class MenuLateral {
 	    public MenuLateral(WebDriver driver) {							
 	        this.driver = driver;
 	    }
+	    
+	    public static void acessaHome(){
+	    	
+	    }
 	
 	public void visita() {
         //driver.get("localhost:8080/usuarios");

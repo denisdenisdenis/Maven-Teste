@@ -17,7 +17,7 @@ public class ElementosDaTela {
 	private TypeAction action;
 	
 	
-	public ElementosDaTela(TypeElements type, String name, TypeAction action) {
+	public ElementosDaTela(TypeElements type, String name, TypeAction action, String value, String urlImage) {
 		super();
 		this.type = type;
 		this.action = action;
