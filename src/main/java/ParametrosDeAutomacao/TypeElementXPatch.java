@@ -1,13 +1,14 @@
 package ParametrosDeAutomacao;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class TypeElementJQuery implements TypeElement {
+public class TypeElementXPatch implements TypeElement{
 
 	public WebElement find(WebDriver driver, ElementosDaTela el) {
-		// TODO Auto-generated method stub
-		return null;
+		return driver.findElement(By.xpath(el.getNameElement()));
 	}
 
+	
 }

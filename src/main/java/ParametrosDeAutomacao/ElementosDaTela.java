@@ -4,28 +4,33 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.server.handler.html5.ClearSessionStorage;
 
 public class ElementosDaTela {
-	private TypeElements type;
 	
-	private String name;
+	private String nameElement;
 	
 	private String value;
-	
-	private WebElement element;
 
 	private String urlImage;
 	
 	private TypeAction action;
 	
+	private TypeElement type;
 	
-	public ElementosDaTela(TypeElements type, String name, TypeAction action, String value, String urlImage) {
+	private WebElement element;
+	
+	public ElementosDaTela(TypeElement type, String nameElement, TypeAction action, String value, String urlImage) {
 		super();
 		this.type = type;
 		this.action = action;
-		this.name = name;
+		this.nameElement = nameElement;
 		this.value = value;
 		this.urlImage = urlImage;
 	}
-
+	public ElementosDaTela(TypeElement type, String nameElement, TypeAction action) {
+		super();
+		this.action = action;
+		this.nameElement = nameElement;
+		this.type = type;
+	}
 
 	public TypeAction getAction() {
 		return action;
@@ -37,23 +42,23 @@ public class ElementosDaTela {
 	}
 
 
-	public TypeElements getType() {
+	public TypeElement getType() {
 		return type;
 	}
 
 
-	public void setType(TypeElements type) {
+	public void setType(TypeElement type) {
 		this.type = type;
 	}
 
 
-	public String getName() {
-		return name;
+	public String getNameElement() {
+		return nameElement;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNameElement(String name) {
+		this.nameElement = name;
 	}
 
 
@@ -80,7 +85,6 @@ public class ElementosDaTela {
 	public String getUrlImage() {
 		return urlImage;
 	}
-
 
 	public void setUrlImage(String urlImage) {
 		this.urlImage = urlImage;

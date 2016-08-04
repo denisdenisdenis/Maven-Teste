@@ -17,6 +17,7 @@ public class ChatNeoflowTestSystem {
 	@Before
 	public void inicializa() {
 		navegador = "Chrome";
+		//navegador = "FireFox";
 		UtilTest.iniciaDriver(navegador);
 		baseUrl = "http://10.221.230.175:9880";
 	}
@@ -24,7 +25,10 @@ public class ChatNeoflowTestSystem {
 	@Test
 	public void deveLogarNoChatViaNeoFlow() {
 		Neoflow.logar(baseUrl,"adm", "123");
-		MenuLateral.acessaCanais(baseUrl);
+		MenuLateral.acessaCanais(baseUrl)	
+		.acessaCallCenter("")
+		.acessaIniciarAtendimento("");
+
 	//	menuLateral.acessaHome().acessaCanais().acessaCallCenter();
 		
 		

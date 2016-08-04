@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import ParametrosDeAutomacao.ElementosDaTela;
 
@@ -28,7 +29,7 @@ public class UtilTest {
 			} catch (Exception e) {
 			}
 			try {
-				el.getAction().doit(el);
+				el.getAction().doit(driver, el);
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
@@ -42,18 +43,15 @@ public class UtilTest {
 		if (navegador == "Chrome") {
 			System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-			
-			
-//			driver.findElement(By.className(className));
-//			driver.findElement(By.cssSelector(selector));
-//			driver.findElement(By.linkText(linkText));
-//			driver.findElement(By.partialLinkText(linkText));
-//			driver.findElement(By.tagName(name));
-//			driver.findElement(By.xpath(xpathExpression));
-			
+			}
+		else{
+			if (navegador == "FireFox"){
+				driver = new FirefoxDriver();
+				}
+			}
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			
 		}
-		// implementar outros navegadores
-	}
+		
+	
 }
